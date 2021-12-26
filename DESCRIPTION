@@ -1,0 +1,14 @@
+Package: toolbox
+Title: Personal functions and palettes
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Matheus",
+           family = "Alves Albino",
+           role = c("aut", "cre"),
+           email = "albino@alumni.usp.br")
+Description: Tools for demographic analysis, helper functions, themes and palettes for my work at Unicamp
+License: use_mit_license()
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
