@@ -3,7 +3,7 @@
 \docType{data}
 \name{tricolour_pal}
 \alias{tricolour_pal}
-\title{Personal palettes}
+\title{Tri-color palette}
 \format{
 An object of class \code{character} of length 3.
 }
@@ -12,8 +12,5 @@ tricolour_pal
 }
 \description{
 Color scales for theme_simple
-}
-\details{
-Semiotic
 }
 \keyword{datasets}

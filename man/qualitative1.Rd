@@ -11,6 +11,6 @@ An object of class \code{character} of length 1.
 qualitative1
 }
 \description{
-Qualitative color schemes by Paul Tol
+Color scales for theme_simple
 }
 \keyword{datasets}

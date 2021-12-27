@@ -11,6 +11,6 @@ An object of class \code{character} of length 8.
 redfocus
 }
 \description{
-Red as highlight
+Color scales for theme_simple
 }
 \keyword{datasets}

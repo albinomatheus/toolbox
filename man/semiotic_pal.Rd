@@ -11,6 +11,6 @@ An object of class \code{character} of length 7.
 semiotic_pal
 }
 \description{
-Semiotic
+Color scales for theme_simple
 }
 \keyword{datasets}

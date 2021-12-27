@@ -1,131 +1,73 @@
-#' Simple Grey
+#' Personal palettes
 #'
 #' Color scales for theme_simple
+#'
+
+#' Simple Grey
 #' @export
 simple_grey <- colorRampPalette(c("#404040", "#D9D9D9"))
 
 #' Simple Blue
-#'
-#' Color scales for theme_simple
 #' @export
-simple_blue <- colorRampPalette(c("#011526", "#55A6D9"))
+simple_blue <- colorRampPalette(c("#11335d", "#88CCEE"))
 
 #' Simple Red
-#'
-#' Color scales for theme_simple
 #' @export
-simple_red <- colorRampPalette(c("#260101", "#F23D4C"))
-
-#' Simple Green
-#'
-#' Color scales for theme_simple
-#' @export
-simple_green <- colorRampPalette(c("#062626", "#5E8C6A"))
-
-#' Sunset
-#'
-#' Color scales for theme_simple
-#' @export
-simple_cps <- colorRampPalette(c("#A6243C", "#402759", "#F2E852", "#F2762E", "#F23E2E"))
+simple_red <- colorRampPalette(c("#11335d", "#88CCEE"))
 
 #' Tri-color palette
-#'
-#' Color scales for theme_simple
 #' @export
 tricolour_pal <- c("#9d1939", "#eebd31", "#11335d")
 
 #' Semiotic
-#'
-#' Color scales for theme_simple
 #' @export
 semiotic_pal <- c("#ffd700","#ffb14e","#fa8775", "#ea5f94", "#cd34b5","#9d02d7","#0000ff")
 
 #' Red as highlight
-#'
-#' Color scales for theme_simple
 #' @export
 redfocus <- c("#CB181D", "#252525", "#525252", "#737373", "#969696", "#BDBDBD", "#D9D9D9", "#F0F0F0")
 
 #' Green as highlight
-#'
-#' Color scales for theme_simple
 #' @export
 greenfocus <- c("#41AB5D", "#252525", "#525252", "#737373", "#969696", "#BDBDBD", "#D9D9D9", "#F0F0F0")
 
 #' Blue as highlight
-#'
-#' Color scales for theme_simple
 #' @export
 bluefocus <- c("#0033FF", "#252525", "#525252", "#737373", "#969696", "#BDBDBD", "#D9D9D9", "#F0F0F0")
 
 #' Qualitative color schemes by Paul Tol
-#'
-#' Color scales for theme_simple
 #' @export
 qualitative1 <- c("#4477AA")
-
 #' Qualitative color schemes by Paul Tol
-#'
-#' Color scales for theme_simple
 #' @export
 qualitative2 <- c("#4477AA", "#CC6677")
-
 #' Qualitative color schemes by Paul Tol
-#'
-#' Color scales for theme_simple
 #' @export
 qualitative3 <- c("#4477AA", "#DDCC77", "#CC6677")
-
 #' Qualitative color schemes by Paul Tol
-#'
-#' Color scales for theme_simple
 #' @export
 qualitative4 <- c("#4477AA", "#117733", "#DDCC77", "#CC6677")
-
 #' Qualitative color schemes by Paul Tol
-#'
-#' Color scales for theme_simple
 #' @export
 qualitative5 <- c("#332288", "#88CCEE", "#117733", "#DDCC77", "#CC6677")
-
 #' Qualitative color schemes by Paul Tol
-#'
-#' Color scales for theme_simple
 #' @export
 qualitative6 <- c("#332288", "#88CCEE", "#117733", "#DDCC77", "#CC6677","#AA4499")
-
 #' Qualitative color schemes by Paul Tol
-#'
-#' Color scales for theme_simple
 #' @export
 qualitative7 <- c("#332288", "#88CCEE", "#44AA99", "#117733", "#DDCC77", "#CC6677","#AA4499")
-
 #' Qualitative color schemes by Paul Tol
-#'
-#' Color scales for theme_simple
 #' @export
 qualitative8 <- c("#332288", "#88CCEE", "#44AA99", "#117733", "#999933", "#DDCC77", "#CC6677","#AA4499")
-
 #' Qualitative color schemes by Paul Tol
-#'
-#' Color scales for theme_simple
 #' @export
 qualitative9 <- c("#332288", "#88CCEE", "#44AA99", "#117733", "#999933", "#DDCC77", "#CC6677", "#882255", "#AA4499")
-
 #' Qualitative color schemes by Paul Tol
-#'
-#' Color scales for theme_simple
 #' @export
 qualitative10 <- c("#332288", "#88CCEE", "#44AA99", "#117733", "#999933", "#DDCC77", "#661100", "#CC6677", "#882255", "#AA4499")
-
 #' Qualitative color schemes by Paul Tol
-#'
-#' Color scales for theme_simple
 #' @export
 qualitative11 <- c("#332288", "#6699CC", "#88CCEE", "#44AA99", "#117733", "#999933", "#DDCC77", "#661100", "#CC6677", "#882255", "#AA4499")
-
 #' Qualitative color schemes by Paul Tol
-#'
-#' Color scales for theme_simple
 #' @export
 qualitative12 <- c("#332288", "#6699CC", "#88CCEE", "#44AA99", "#117733", "#999933", "#DDCC77", "#661100", "#CC6677", "#AA4466", "#882255", "#AA4499")

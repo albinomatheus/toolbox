@@ -11,6 +11,6 @@ An object of class \code{character} of length 8.
 bluefocus
 }
 \description{
-Blue as highlight
+Color scales for theme_simple
 }
 \keyword{datasets}
