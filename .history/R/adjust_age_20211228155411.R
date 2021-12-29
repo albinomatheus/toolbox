@@ -5,6 +5,8 @@
 #' @export
 
 adjust_age <- function(data, location = "Estado de São Paulo", year = 2010, AgeL = 0, AgeH = 75) {
+  AgeL <- AgeL
+  AgeH <- AgeH
   data <- data %>% 
     filter(local == as.character(location), 
            ano == as.numeric(year),
