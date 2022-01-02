@@ -66,7 +66,7 @@ theme_simple <- function(base_family="HelveticaNowDisplay Light",
 
   } else {
 
-    grid_color <- "grey60"
+    grid_color <- "grey30"
     tick_color <- "grey30"
   }
 
