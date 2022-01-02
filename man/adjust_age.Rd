@@ -4,7 +4,13 @@
 \alias{adjust_age}
 \title{Adjusting population age structure}
 \usage{
-adjust_age(data, location, year, AgeL, AgeH)
+adjust_age(
+  data,
+  location = "Estado de São Paulo",
+  year = 2010,
+  AgeL = 0,
+  AgeH = 75
+)
 }
 \description{
 Smooth population counts using Arriaga and Sprague methods
