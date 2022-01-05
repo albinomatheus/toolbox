@@ -66,8 +66,8 @@ theme_simple <- function(base_family="HelveticaNowDisplay Light",
 
   } else {
 
-    grid_color <- "#999999"
-    tick_color <- "#4d4d4d"
+    grid_color <- "grey70"
+    tick_color <- "grey70"
   }
 
   if (inherits(grid, "character") | grid == TRUE) {
