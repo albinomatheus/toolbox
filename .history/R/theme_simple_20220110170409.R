@@ -1,6 +1,6 @@
 #' Personal ggplot theme
 #'
-#' A precise, clean ad minimal theme for ggplot2. Influenced by @@hrbrmstr and @@jkaupp.
+#' A precise, clean and minimal theme for ggplot2. Influenced by @@hrbrmstr and @@jkaupp.
 #'
 #' @param base_family Base font family
 #' @param base_size Base font size
@@ -199,5 +199,7 @@ theme_simple <- function(base_family="HelveticaNowDisplay Light",
                                                                         color = tick_color))
 
   }
+
   ret
+
 }
