@@ -9,7 +9,7 @@ TOPALS_fit(
   D,
   std,
   age_group_bounds = 0:100,
-  knot_positions = c(0, 1, 12, 20, 40, 70),
+  knot_positions = c(0, 1, 10, 20, 40, 70),
   penalty_precision = 2,
   max_iter = 50,
   alpha_tol = 5e-05,

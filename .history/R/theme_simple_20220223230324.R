@@ -50,10 +50,11 @@ theme_simple <- function(base_family="HelveticaNowDisplay Light",
                      markdown = TRUE) {
 
   ret <- ggplot2::theme_minimal(base_family = base_family, base_size = base_size)
-
   ret <- ret + ggplot2::theme(legend.background = ggplot2::element_blank())
   ret <- ret + ggplot2::theme(legend.key = ggplot2::element_blank())
-
+  ret <- ret + ggplot2::theme(legend.title = ggplot2::element_blank())
+  ret <- ret + ggplot2::theme(plot.title.position = 'plot')
+  ret <- ret + ggplot2::theme(plot.margin = ggplot2::margin(25, 25, 10, 25))
 
   if (dark == TRUE) {
 
@@ -66,7 +67,7 @@ theme_simple <- function(base_family="HelveticaNowDisplay Light",
 
   } else {
 
-    grid_color <- "#999999"
+    grid_color <- "#cccccc"
     tick_color <- "#4d4d4d"
   }
 
@@ -198,9 +199,37 @@ theme_simple <- function(base_family="HelveticaNowDisplay Light",
                                                                         color = tick_color))
 
   }
-
-  ret <- ret + ggplot2::theme(plot.margin = ggplot2::margin(25, 25, 10, 25))
-
   ret
+}
+
+#' Percentages
+#'
+#' @param labels vector of labels
+#'
+#' @return formatted labels
+#' @export
+scale_percent_labels <- function(labels){
+
+  labels <- labels*100
+
+  labels[length(labels)] <- paste0(labels[length(labels)], "%")
+
+  return(labels)
+
+}
+
+#' Currency
+#'
+#' @param labels vector of labels
+#'
+#' @return formatted labels
+#' @export
+scale_dollar_labels <- function(labels){
+
+  labels <- labels
+
+  labels[length(labels)] <- paste0(labels[length(labels)], "$")
+
+  return(labels)
 
 }
