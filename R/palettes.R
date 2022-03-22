@@ -2,43 +2,37 @@
 #'
 #' Color scales for theme_simple
 #' @export
-simple_grey <- colorRampPalette(c("#404040", "#D9D9D9"))
+simple_grey <- colorRampPalette(c("#252525", "#D9D9D9"))
 
 #' Simple Blue
 #'
 #' Color scales for theme_simple
 #' @export
-simple_blue <- colorRampPalette(c("#011526", "#55A6D9"))
+simple_blue <- colorRampPalette(c("#123447", "#B9D1E3"))
 
 #' Simple Red
 #'
 #' Color scales for theme_simple
 #' @export
-simple_red <- colorRampPalette(c("#260101", "#F23D4C"))
+simple_red <- colorRampPalette(c("#A6243C", "#F18A7C"))
 
 #' Simple Green
 #'
 #' Color scales for theme_simple
 #' @export
-simple_green <- colorRampPalette(c("#062626", "#5E8C6A"))
+simple_green <- colorRampPalette(c("#4E6010", "#DDCC77"))
 
 #' Sunset
 #'
 #' Color scales for theme_simple
 #' @export
-simple_sunset <- colorRampPalette(c("#A6243C", "#402759", "#F2E852", "#F2762E", "#F23E2E"))
-
-#' Semiotic
-#'
-#' Color scales for theme_simple
-#' @export
-semiotic_pal <- c("#ffd700","#ffb14e","#fa8775", "#ea5f94", "#cd34b5","#9d02d7","#0000ff")
+simple_sunset <- colorRampPalette(c("#A6243C", "#024959", "#F2B705", "#F2762E", "#D92929"))
 
 #' Red as highlight
 #'
 #' Color scales for theme_simple
 #' @export
-redfocus <- c("#CB181D", "#252525", "#525252", "#737373", "#969696", "#BDBDBD", "#D9D9D9", "#F0F0F0")
+redfocus <- c("#D92929", "#252525", "#525252", "#737373", "#969696", "#BDBDBD", "#D9D9D9", "#F0F0F0")
 
 #' Green as highlight
 #'
