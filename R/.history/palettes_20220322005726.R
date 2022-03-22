@@ -26,7 +26,7 @@ simple_green <- colorRampPalette(c("#4E6010", "#DDCC77"))
 #'
 #' Color scales for theme_simple
 #' @export
-simple_sunset <- colorRampPalette(c("#024959","#A6243C", "#F2B705", "#F2762E", "#D92929"))
+simple_sunset <- colorRampPalette(c("#A6243C", "#024959", "#F2B705", "#F2762E", "#D92929"))
 
 #' Red as highlight
 #'
