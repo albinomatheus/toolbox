@@ -27,17 +27,17 @@
 #'
 #' @export
 
-theme_simple <- function(base_family="HelveticaNowDisplay Light",
+theme_simple <- function(base_family="HelveticaNowDisplay Medium",
                      base_size = 16,
-                     strip_text_family = base_family,
+                     strip_text_family = "HelveticaNowDisplay Light",
                      strip_text_size = 16,
                      plot_title_family = "HelveticaNowDisplay Bold",
                      plot_title_size = 20,
                      plot_title_margin = 10,
-                     subtitle_family = "HelveticaNowDisplay Light",
+                     subtitle_family = "HelveticaNowDisplay Medium",
                      subtitle_size = 16,
                      subtitle_margin = 10,
-                     caption_family = "HelveticaNowDisplay Light",
+                     caption_family = "HelveticaNowDisplay Medium",
                      caption_size = 12,
                      caption_margin = 10,
                      axis_title_family = "HelveticaNowDisplay Medium",
