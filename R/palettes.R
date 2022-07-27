@@ -2,19 +2,19 @@
 #'
 #' Color scales for theme_simple
 #' @export
-simple_grey <- colorRampPalette(c("#252525", "#D9D9D9"))
+simple_grey <- colorRampPalette(c("#252525", "#edf8e9"))
 
 #' Simple Blue
 #'
 #' Color scales for theme_simple
 #' @export
-simple_blue <- colorRampPalette(c("#123447", "#B9D1E3"))
+simple_blue <- colorRampPalette(c("#123447", "#eff3ff"))
 
 #' Simple Red
 #'
 #' Color scales for theme_simple
 #' @export
-simple_red <- colorRampPalette(c("#A6243C", "#F18A7C"))
+simple_red <- colorRampPalette(c("#99000d", "#fee5d9"))
 
 #' Simple Green
 #'
