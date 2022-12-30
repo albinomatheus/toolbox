@@ -3,6 +3,7 @@
 export(Dspline_fit)
 export(TOPALS_fit)
 export(adjust_age)
+export(age_structure)
 export(bluefocus)
 export(greenfocus)
 export(qualitative1)
