@@ -27,20 +27,20 @@
 #'
 #' @export
 
-theme_simple <- function(base_family="HelveticaNowDisplay Medium",
+theme_simple <- function(base_family="HelveticaNowDisplay Regular",
                      base_size = 16,
-                     strip_text_family = "HelveticaNowDisplay Light",
+                     strip_text_family = "HelveticaNowDisplay Regular",
                      strip_text_size = 16,
                      plot_title_family = "HelveticaNowDisplay Bold",
                      plot_title_size = 20,
                      plot_title_margin = 10,
-                     subtitle_family = "HelveticaNowDisplay Medium",
+                     subtitle_family = "HelveticaNowDisplay Regular",
                      subtitle_size = 16,
                      subtitle_margin = 10,
-                     caption_family = "HelveticaNowDisplay Medium",
+                     caption_family = "HelveticaNowDisplay Regular",
                      caption_size = 12,
                      caption_margin = 10,
-                     axis_title_family = "HelveticaNowDisplay Medium",
+                     axis_title_family = "HelveticaNowDisplay Regular",
                      axis_title_size = 12,
                      axis_title_just = "mm",
                      dark = FALSE,
@@ -213,6 +213,22 @@ scale_percent_labels <- function(labels){
   labels <- labels*100
 
   labels[length(labels)] <- paste0(labels[length(labels)], "%")
+
+  return(labels)
+
+}
+
+#' Years
+#'
+#' @param labels vector of labels
+#'
+#' @return formatted labels
+#' @export
+scale_years_labels <- function(labels){
+
+  labels <- labels*100
+
+  labels[length(labels)] <- paste0(labels[length(labels)], "anos")
 
   return(labels)
 

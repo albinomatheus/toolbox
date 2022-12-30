@@ -218,6 +218,22 @@ scale_percent_labels <- function(labels){
 
 }
 
+#' Years
+#'
+#' @param labels vector of labels
+#'
+#' @return formatted labels
+#' @export
+scale_years_labels <- function(labels){
+
+  labels <- labels
+
+  labels[length(labels)] <- paste0(labels[length(labels)], "anos")
+
+  return(labels)
+
+}
+
 #' Currency
 #'
 #' @param labels vector of labels
