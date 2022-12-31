@@ -79,9 +79,6 @@ object itself. Built-in transformations include "asn", "atanh",
 scales, "top" or "bottom" for horizontal scales}
 
 \item{sec.axis}{specify a secondary axis}
-
-\item{oob}{Function that handles limits outside of the scale limits
-(out of bounds). The default replaces out of bounds values with NA.}
 }
 \description{
 The \verb{_percent} ones set precent format for axis text and \code{expand=c(0,0)} (you need to set limits).
