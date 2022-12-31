@@ -13,7 +13,6 @@ scale_x_percent(
   labels,
   limits = NULL,
   expand = c(0.01, 0),
-  oob = censor,
   na.value = NA_real_,
   trans = "identity",
   position = "bottom",
@@ -67,9 +66,6 @@ Use \code{NA} to refer to the existing minimum or maximum.}
 
 \item{expand}{same as in ggplot2}
 
-\item{oob}{Function that handles limits outside of the scale limits
-(out of bounds). The default replaces out of bounds values with NA.}
-
 \item{na.value}{If \code{na.translate = TRUE}, what value aesthetic
 value should missing be displayed as? Does not apply to position scales
 where \code{NA} is always placed at the far right.}
@@ -83,6 +79,9 @@ object itself. Built-in transformations include "asn", "atanh",
 scales, "top" or "bottom" for horizontal scales}
 
 \item{sec.axis}{specify a secondary axis}
+
+\item{oob}{Function that handles limits outside of the scale limits
+(out of bounds). The default replaces out of bounds values with NA.}
 }
 \description{
 The \verb{_percent} ones set precent format for axis text and \code{expand=c(0,0)} (you need to set limits).
