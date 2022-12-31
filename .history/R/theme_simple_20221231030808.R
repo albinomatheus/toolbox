@@ -55,28 +55,27 @@ theme_simple <- function(
     ret <- ret + ggplot2::theme(legend.title = ggplot2::element_blank())
     ret <- ret + ggplot2::theme(plot.title.position = 'plot')
     ret <- ret + ggplot2::theme(plot.margin = ggplot2::margin(25, 25, 10, 25))
-  
+
   if (dark == TRUE) {
-    ret <- ret + 
-    ggplot2::theme(
-      plot.background = ggplot2::element_rect(fill ="#2E3440"),
-      text = ggplot2::element_text(color = "white"),
-      strip.text = ggplot2::element_text(color = "white"))
+
+    ret <- ret + ggplot2::theme(plot.background = ggplot2::element_rect(fill ="#2E3440"),
+                                text = ggplot2::element_text(color = "white"),
+                                strip.text = ggplot2::element_text(color = "white"))
+
     grid_color <- "#E5E9F0"
     tick_color = "#E5E9F0"
 
   } else {
+
     grid_color <- "#cccccc"
     tick_color <- "#4d4d4d"
   }
 
   if (inherits(grid, "character") | grid == TRUE) {
-    ret <- ret + 
-    ggplot2::theme(panel.grid = ggplot2::element_line(color = grid_color, size = 0.10))
-    ret <- ret + 
-    ggplot2::theme(panel.grid.major = ggplot2::element_line(color = grid_color, size = 0.10))
-    ret <- ret + 
-    ggplot2::theme(panel.grid.minor = ggplot2::element_line(color = grid_color, size = 0.05))
+
+    ret <- ret + ggplot2::theme(panel.grid = ggplot2::element_line(color = grid_color, size = 0.10))
+    ret <- ret + ggplot2::theme(panel.grid.major = ggplot2::element_line(color = grid_color, size = 0.10))
+    ret <- ret + ggplot2::theme(panel.grid.minor = ggplot2::element_line(color = grid_color, size = 0.05))
 
     if (inherits(grid, "character")) {
       if (regexpr("X", grid)[1] < 0) ret <- ret + ggplot2::theme(panel.grid.major.x = ggplot2::element_blank())
