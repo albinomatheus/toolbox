@@ -78,6 +78,7 @@ is.formula <- function (x) { inherits(x, "formula") }
 #' X & Y scales with opinionated pre-sets for percent & comma label formats
 #'
 #' The `_percent` ones set precent format for axis text and `expand=c(0,0)` (you need to set limits).
+
 #' @param name The name of the scale. Used as axis or legend title. If
 #'   `waiver()`, the default, the name of the scale is taken from the first
 #'   mapping used for that aesthetic. If `NULL`, the legend title will be
@@ -186,6 +187,7 @@ scale_x_percent <- function(name = waiver(),
 
 }
 
+#' @rdname scale_x_percent
 #' @export
 scale_y_percent <- function(name = waiver(),
                             breaks = waiver(),

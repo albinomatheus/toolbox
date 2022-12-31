@@ -20,7 +20,7 @@ theme_simple(
   caption_margin = 10,
   axis_title_family = "HelveticaNowDisplay Regular",
   axis_title_size = 12,
-  axis_title_just = "mm",
+  axis_title_just = "rt",
   dark = FALSE,
   grid = TRUE,
   axis = FALSE,
