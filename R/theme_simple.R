@@ -29,20 +29,20 @@
 
 theme_simple <- function(
   base_family="HelveticaNowDisplay Regular",
-  base_size = 16,
+  base_size = 18,
   strip_text_family = "HelveticaNowDisplay Regular",
-  strip_text_size = 16,
+  strip_text_size = 18,
   plot_title_family = "HelveticaNowDisplay Bold",
-  plot_title_size = 20,
+  plot_title_size = 22,
   plot_title_margin = 10,
   subtitle_family = "HelveticaNowDisplay Regular",
-  subtitle_size = 16,
+  subtitle_size = 18,
   subtitle_margin = 10,
   caption_family = "HelveticaNowDisplay Regular",
-  caption_size = 12,
+  caption_size = 14,
   caption_margin = 10,
   axis_title_family = "HelveticaNowDisplay Regular",
-  axis_title_size = 12,
+  axis_title_size = 18,
   axis_title_just = "mm",
   dark = FALSE,
   grid = TRUE,
@@ -66,8 +66,8 @@ theme_simple <- function(
     tick_color = "#cccccc"
 
   } else {
-    grid_color <- "#131313"
-    tick_color <- "#131313"
+    grid_color <- "#cccccc"
+    tick_color <- "#cccccc"
   }
 
   if (inherits(grid, "character") | grid == TRUE) {

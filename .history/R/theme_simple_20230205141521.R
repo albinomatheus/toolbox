@@ -29,21 +29,21 @@
 
 theme_simple <- function(
   base_family="HelveticaNowDisplay Regular",
-  base_size = 16,
+  base_size = 18,
   strip_text_family = "HelveticaNowDisplay Regular",
-  strip_text_size = 16,
+  strip_text_size = 18,
   plot_title_family = "HelveticaNowDisplay Bold",
-  plot_title_size = 20,
+  plot_title_size = 22,
   plot_title_margin = 10,
   subtitle_family = "HelveticaNowDisplay Regular",
-  subtitle_size = 16,
+  subtitle_size = 18,
   subtitle_margin = 10,
   caption_family = "HelveticaNowDisplay Regular",
-  caption_size = 12,
+  caption_size = 14,
   caption_margin = 10,
   axis_title_family = "HelveticaNowDisplay Regular",
-  axis_title_size = 12,
-  axis_title_just = "rt",
+  axis_title_size = 18,
+  axis_title_just = "mm",
   dark = FALSE,
   grid = TRUE,
   axis = FALSE,
@@ -55,27 +55,28 @@ theme_simple <- function(
     ret <- ret + ggplot2::theme(legend.title = ggplot2::element_blank())
     ret <- ret + ggplot2::theme(plot.title.position = 'plot')
     ret <- ret + ggplot2::theme(plot.margin = ggplot2::margin(25, 25, 10, 25))
-
+  
   if (dark == TRUE) {
-
-    ret <- ret + ggplot2::theme(plot.background = ggplot2::element_rect(fill ="#2E3440"),
-                                text = ggplot2::element_text(color = "white"),
-                                strip.text = ggplot2::element_text(color = "white"))
-
-    grid_color <- "#E5E9F0"
-    tick_color = "#E5E9F0"
+    ret <- ret + 
+    ggplot2::theme(
+      plot.background = ggplot2::element_rect(fill ="#2E3440"),
+      text = ggplot2::element_text(color = "white"),
+      strip.text = ggplot2::element_text(color = "white"))
+    grid_color <- "#cccccc"
+    tick_color = "#cccccc"
 
   } else {
-
-    grid_color <- "#cccccc"
-    tick_color <- "#4d4d4d"
+    grid_color <- "#e3e3e3"
+    tick_color <- "#e3e3e3"
   }
 
   if (inherits(grid, "character") | grid == TRUE) {
-
-    ret <- ret + ggplot2::theme(panel.grid = ggplot2::element_line(color = grid_color, size = 0.10))
-    ret <- ret + ggplot2::theme(panel.grid.major = ggplot2::element_line(color = grid_color, size = 0.10))
-    ret <- ret + ggplot2::theme(panel.grid.minor = ggplot2::element_line(color = grid_color, size = 0.05))
+    ret <- ret + 
+    ggplot2::theme(panel.grid = ggplot2::element_line(color = grid_color, size = 0.10))
+    ret <- ret + 
+    ggplot2::theme(panel.grid.major = ggplot2::element_line(color = grid_color, size = 0.10))
+    ret <- ret + 
+    ggplot2::theme(panel.grid.minor = ggplot2::element_line(color = grid_color, size = 0.05))
 
     if (inherits(grid, "character")) {
       if (regexpr("X", grid)[1] < 0) ret <- ret + ggplot2::theme(panel.grid.major.x = ggplot2::element_blank())
