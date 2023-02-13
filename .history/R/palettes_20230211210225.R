@@ -2,31 +2,37 @@
 #'
 #' Color scales for theme_simple
 #' @export
-simple_grey <- colorRampPalette(c("#252525", "#D9D9D9"))
+simple_grey <- colorRampPalette(c("#252525", "#d9d9d9"))
 
 #' Simple Blue
 #'
 #' Color scales for theme_simple
 #' @export
-simple_blue <- colorRampPalette(c("#123447", "#eff3ff"))
+simple_blue <- colorRampPalette(c("#08306b", "#c6dbef"))
 
 #' Simple Red
 #'
 #' Color scales for theme_simple
 #' @export
-simple_red <- colorRampPalette(c("#99000d", "#fee5d9"))
+simple_red <- colorRampPalette(c("#67000d", "#fcbba1"))
 
 #' Simple Green
 #'
 #' Color scales for theme_simple
 #' @export
-simple_green <- colorRampPalette(c("#4E6010", "#DDCC77"))
+simple_green <- colorRampPalette(c("#00441b", "#c7e9c0"))
 
 #' Sunset
 #'
 #' Color scales for theme_simple
 #' @export
 simple_sunset <- colorRampPalette(c("#024959","#A6243C", "#F2B705", "#F2762E", "#D92929"))
+
+#' Okabe-Ito
+#'
+#' Color scales for theme_simple
+#' @export
+simple_okabeito <- colorRampPalette(c("#E69f00","#56b4e9", "#009e73", "#f0e442", "#0072b2", "#d55e00", "#cc79a7", "#000000"))
 
 #' Red as highlight
 #'
@@ -38,13 +44,13 @@ redfocus <- c("#D92929", "#252525", "#525252", "#737373", "#969696", "#BDBDBD", 
 #'
 #' Color scales for theme_simple
 #' @export
-greenfocus <- c("#41AB5D", "#252525", "#525252", "#737373", "#969696", "#BDBDBD", "#D9D9D9", "#F0F0F0")
+greenfocus <- c("#4E6010", "#252525", "#525252", "#737373", "#969696", "#BDBDBD", "#D9D9D9", "#F0F0F0")
 
 #' Blue as highlight
 #'
 #' Color scales for theme_simple
 #' @export
-bluefocus <- c("#0033FF", "#252525", "#525252", "#737373", "#969696", "#BDBDBD", "#D9D9D9", "#F0F0F0")
+bluefocus <- c("#024959", "#252525", "#525252", "#737373", "#969696", "#BDBDBD", "#D9D9D9", "#F0F0F0")
 
 #' Qualitative color schemes by Paul Tol
 #'
