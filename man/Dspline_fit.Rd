@@ -7,12 +7,13 @@
 Dspline_fit(
   N,
   D,
+  age_group_lower_bounds = 0:99,
+  age_group_upper_bounds = 1:100,
   Amatrix,
   cvector,
   SIGMA.INV,
   knots = seq(from = 3, to = 96, by = 3),
   max_iter = 20,
-  use_MS_basis = FALSE,
   theta_tol = 5e-05,
   details = FALSE
 )
