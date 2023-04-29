@@ -119,8 +119,6 @@ extract_deaths <- function(data, location, sex, year1, year2) {
         return(print("Informação não representa a soma de todo o período"))
         }
         }    
-
-  is.sequential(years_between)
   
   return(output)
 }
