@@ -4,7 +4,7 @@
 #'
 #' @export
 #' 
-get_age_structure <- function(data, location, year, sex) {
+get_age_structure <- function(data, location, year, sex, omega) {
   # 1) Dados sem valores missing
   data2 <- data  |>
     dplyr::filter(
@@ -29,7 +29,7 @@ get_age_structure <- function(data, location, year, sex) {
       Value = data2$pop[data2$sexo == sex], 
       Age = as.numeric(data2$idade[data2$sexo == sex]), 
       AgeInt = data2$ageint[data2$sexo == sex],
-      OAnew = 100, 
+      OAnew = omega, 
       OAG = TRUE)
   pclm_res <- 
     dplyr::tibble(
@@ -59,7 +59,7 @@ get_age_structure <- function(data, location, year, sex) {
   
   abridged <-  
     base::data.frame(
-      age = c(0, 1, seq(5, 85, by = 5), 85, 85, 85),
+      age = c(0, 1, seq(5, 85, by = 5), rep(85, (omega/5) - 18)),
       pop = round(pop_abr),
       local = location,
       ano = year,
