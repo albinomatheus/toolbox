@@ -67,10 +67,10 @@ get_age_structure <- function(data, location, year, sex, omega) {
       local = location,
       ano = year,
       sexo = sex)  |> 
-    dplyr::as_tibble() #|> 
-    #dplyr::group_by(age, local, ano, sexo) |> 
-    #dplyr::summarise(pop = sum(pop)) |> 
-    #dplyr::ungroup()
+    dplyr::as_tibble() |> 
+    dplyr::group_by(age, local, ano, sexo) |> 
+    dplyr::summarise(pop = sum(pop)) |> 
+    dplyr::ungroup()
   
   full <- 
     base::data.frame(
