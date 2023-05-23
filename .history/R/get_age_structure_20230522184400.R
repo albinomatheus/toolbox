@@ -29,7 +29,8 @@ get_age_structure <- function(data, location, year, sex, omega) {
       Value = data2$pop[data2$sexo == sex], 
       Age = as.numeric(data2$idade[data2$sexo == sex]), 
       AgeInt = data2$ageint[data2$sexo == sex],
-      OAnew = omega)
+      OAnew = omega, 
+      OAG = TRUE)
   pclm_res <- 
     dplyr::tibble(
       pop_true = pclm_fit, 
@@ -38,11 +39,7 @@ get_age_structure <- function(data, location, year, sex, omega) {
   
   # 4) Resultados Consolidados
   pop_full <- pclm_res$pop_est
-  pop_abr <- 
-    DemoTools::groupOAG(
-      Value = DemoTools::single2abridged(pop_full),
-      Age = c(0,1, seq(5,100,5)), 
-      OAnew = 85)
+  pop_abr <- DemoTools::single2abridged(pop_full)
   pop_gr <- 
     DemoTools::groupAges(
       pop_full, 
@@ -62,15 +59,15 @@ get_age_structure <- function(data, location, year, sex, omega) {
   
   abridged <-  
     base::data.frame(
-      age = c(0, 1, seq(5, 85, by = 5),
+      age = c(0, 1, seq(5, 85, by = 5), rep(85, (omega/5) - 17)),
       pop = round(pop_abr),
       local = location,
       ano = year,
       sexo = sex)  |> 
     dplyr::as_tibble() |> 
     dplyr::group_by(age, local, ano, sexo) |> 
-    dplyr::summarise(pop = sum(pop)) #|> 
-    #dplyr::ungroup()
+    dplyr::summarise(pop = sum(pop)) |> 
+    dplyr::ungroup()
   
   full <- 
     base::data.frame(
