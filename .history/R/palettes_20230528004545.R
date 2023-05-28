@@ -28,6 +28,8 @@ simple_green <- colorRampPalette(c("#00441b", "#c7e9c0"))
 #' @export
 simple_sunset <- colorRampPalette(c("#024959","#A6243C", "#F2B705", "#F2762E", "#D92929"))
 
+campinas_sunset <- colorRampPalette(c('#581845', '#821341', '#a90a3d', '#cc1239', '#e03e37', '#ef6033', '#fa812c', '#ffa220', '#ffc300'))
+
 #' Okabe-Ito
 #'
 #' Color scales for theme_simple

@@ -26,7 +26,7 @@ simple_green <- colorRampPalette(c("#00441b", "#c7e9c0"))
 #'
 #' Color scales for theme_simple
 #' @export
-simple_sunset <- colorRampPalette(c("#024959","#A6243C", "#F2B705", "#F2762E", "#D92929"))
+simple_sunset <- colorRampPalette(c("#581845", "#9a0e3e", "#d11d39", "#ed5934", "#fd8e28", "#ffc300"))
 
 #' Okabe-Ito
 #'
@@ -47,7 +47,7 @@ simple_okabeito<- c(`orange` = "#E69F00",
   `reddish purple` = "#CC79A7",
   `dark yellow` = "#F5C710",
   `amber` = "#F5C710"
-))
+)
 
 #' Red as highlight
 #'
