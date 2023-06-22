@@ -4,31 +4,31 @@
 #'
 #' @export
 #' 
-get_age_structure <- function(data, location, year, sex, omega) {
-  # 1) Dados sem valores missing
+get_structure <- function(data, area, year, sex, omega) {
+  # 1) Input with missing values
   data2 <- data  |>
     dplyr::filter(
-      local == as.character(location),
-      ano == as.numeric(year),
-      idade != "ND",
-      sexo == as.character(sex))  |>
-    dplyr::mutate(idade = as.numeric(idade))
+      area == as.character(area),
+      year == as.numeric(year),
+      age != "ND",
+      sex == as.character(sex))  |>
+    dplyr::mutate(age = as.numeric(age))
   
-  # 2) Dados com valores missing 
+  # 2) Input without missing values
   data_na <- data |> 
     dplyr::filter(
-      local == as.character(location),
-      ano == as.numeric(year),
-      sexo == as.character(sex))  |>
-    dplyr::mutate(idade = as.numeric(idade)) |> 
+      area == as.character(area),
+      year == as.numeric(year),
+      sex == as.character(sex))  |>
+    dplyr::mutate(age = as.numeric(age)) |> 
     dplyr::summarise(total = sum(pop))
   
   # 3) PCLM
   pclm_fit <- 
     DemoTools::graduate_pclm(
-      Value = data2$pop[data2$sexo == sex], 
-      Age = as.numeric(data2$idade[data2$sexo == sex]), 
-      AgeInt = data2$ageint[data2$sexo == sex],
+      Value = data2$pop[data2$sex == sex], 
+      Age = as.numeric(data2$age[data2$sex == sex]), 
+      AgeInt = data2$ageint[data2$sex == sex],
       OAnew = omega)
   pclm_res <- 
     dplyr::tibble(
@@ -55,8 +55,8 @@ get_age_structure <- function(data, location, year, sex, omega) {
     base::data.frame(
       age = seq(0, 85, by = 5),
       pop = round(pop_gr),
-      local = location,
-      ano = year,
+      area = area,
+      year = year,
       sex = sex)  |> 
     dplyr::as_tibble()
   
@@ -64,25 +64,25 @@ get_age_structure <- function(data, location, year, sex, omega) {
     base::data.frame(
       age = c(0, 1, seq(5, 85, by = 5)),
       pop = round(pop_abr),
-      local = location,
-      ano = year,
-      sexo = sex)  |> 
+      area = area,
+      year = year,
+      sex = sex)  |> 
     dplyr::as_tibble()
   
   full <- 
     base::data.frame(
       age = 1:length(pop_full) - 1,
       pop = round(pop_full),
-      local = location,
-      ano = year,
-      sexo = sex)  |> 
+      area = area,
+      year = year,
+      sex = sex)  |> 
     dplyr::as_tibble()
   
   output <- 
     base::list(
-      pop_grupos = grouped, 
-      pop_abreviada = abridged, 
-      pop_idade_simples = full)
+      pop_5x1 = grouped, 
+      pop_abridged = abridged, 
+      pop_1x1 = full)
   
   return(output)
   
