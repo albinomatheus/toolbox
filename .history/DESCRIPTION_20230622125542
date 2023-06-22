@@ -1,6 +1,6 @@
 Package: toolbox
 Title: Matheus' personal functions and palettes
-Version: 1.23.05
+Version: 1.23.06
 Authors@R: 
     person(given = "Matheus",
            family = "Alves Albino",
