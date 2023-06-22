@@ -4,7 +4,7 @@
 \alias{get_structure}
 \title{Estimate population counts from Census Statistics}
 \usage{
-get_structure(data, area, age, year, sex, omega)
+get_structure(data, area, year, sex, omega)
 }
 \description{
 Smooth population counts using PCLM method
