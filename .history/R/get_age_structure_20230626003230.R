@@ -21,7 +21,7 @@ get_age_structure <- function(data, location, year, sex, omega) {
       ano == as.numeric(year),
       sexo == as.character(sex))  |>
     dplyr::mutate(idade = as.numeric(idade)) |> 
-    dplyr::summarise(total = sum(pop) - 0.1)
+    dplyr::summarise(total = sum(pop))
   
   # 3) PCLM
   pclm_fit <- 
@@ -40,8 +40,8 @@ get_age_structure <- function(data, location, year, sex, omega) {
   pop_full <- pclm_res$pop_est
   pop_abr <- 
     DemoTools::groupOAG(
-      Value = DemoTools::single2abridged(pop_full),
-      Age = c(0,1, seq(5,100,5)), 
+      DemoTools::single2abridged(pop_full),
+      Age = c(0,1, seq(5,omega,5)), 
       OAnew = 85)
   pop_gr <- 
     DemoTools::groupAges(
@@ -54,7 +54,7 @@ get_age_structure <- function(data, location, year, sex, omega) {
   grouped <- 
     base::data.frame(
       age = seq(0, 85, by = 5),
-      pop = round(pop_gr),
+      pop = pop_gr,
       local = location,
       ano = year,
       sex = sex)  |> 
@@ -62,20 +62,17 @@ get_age_structure <- function(data, location, year, sex, omega) {
   
   abridged <-  
     base::data.frame(
-      age = c(0, 1, seq(5, 85, by = 5),
-      pop = round(pop_abr),
+      age = c(0, 1, seq(5, 85, by = 5)),
+      pop = pop_abr,
       local = location,
       ano = year,
       sexo = sex)  |> 
-    dplyr::as_tibble() |> 
-    dplyr::group_by(age, local, ano, sexo) |> 
-    dplyr::summarise(pop = sum(pop)) #|> 
-    #dplyr::ungroup()
+    dplyr::as_tibble()
   
   full <- 
     base::data.frame(
       age = 1:length(pop_full) - 1,
-      pop = round(pop_full),
+      pop = pop_full,
       local = location,
       ano = year,
       sexo = sex)  |> 

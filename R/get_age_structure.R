@@ -54,7 +54,7 @@ get_age_structure <- function(data, location, year, sex, omega) {
   grouped <- 
     base::data.frame(
       age = seq(0, 85, by = 5),
-      pop = round(pop_gr),
+      pop = pop_gr,
       local = location,
       ano = year,
       sex = sex)  |> 
@@ -63,7 +63,7 @@ get_age_structure <- function(data, location, year, sex, omega) {
   abridged <-  
     base::data.frame(
       age = c(0, 1, seq(5, 85, by = 5)),
-      pop = round(pop_abr),
+      pop = pop_abr,
       local = location,
       ano = year,
       sexo = sex)  |> 
@@ -72,7 +72,7 @@ get_age_structure <- function(data, location, year, sex, omega) {
   full <- 
     base::data.frame(
       age = 1:length(pop_full) - 1,
-      pop = round(pop_full),
+      pop = pop_full,
       local = location,
       ano = year,
       sexo = sex)  |> 
