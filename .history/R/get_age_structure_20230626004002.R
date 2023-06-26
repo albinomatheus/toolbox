@@ -85,4 +85,5 @@ get_age_structure <- function(data, location, year, sex, omega) {
       pop_idade_simples = full)
   
   return(output)
+  
 }
