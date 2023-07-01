@@ -58,7 +58,7 @@ extract_deaths <- function(data, location, sex, year1, year2) {
   
   d_single <- df_full |> 
     dplyr::group_by(age) |> 
-    dplyr::reframe(deaths = round(sum(deaths))) |> 
+    dplyr::reframe(deaths = sum(deaths)) |> 
     dplyr::mutate(deaths = d_na$total*(deaths/sum(deaths)))
   
   d_abr <- 
@@ -75,7 +75,7 @@ extract_deaths <- function(data, location, sex, year1, year2) {
   grouped <- 
     base::data.frame(
       age = seq(0, 85, by = 5),
-      deaths = round(d_gr),
+      deaths = d_gr,
       local = location,
       ano1 = year1,
       ano2 = year2,
@@ -85,7 +85,7 @@ extract_deaths <- function(data, location, sex, year1, year2) {
   abridged <-  
     base::data.frame(
       age = c(0, 1, seq(5, 85, by = 5), 85, 85, 85),
-      deaths = round(d_abr),
+      deaths = d_abr,
       local = location,
       ano1 = year1,
       ano2 = year2,
@@ -98,7 +98,7 @@ extract_deaths <- function(data, location, sex, year1, year2) {
   single <- 
     base::data.frame(
       age = d_single$age,
-      deaths = round(d_single$deaths),
+      deaths = d_single$deaths,
       local = location,
       ano1 = year1,
       ano2 = year2,
@@ -119,6 +119,8 @@ extract_deaths <- function(data, location, sex, year1, year2) {
         return(print("Informação não representa a soma de todo o período"))
         }
         }    
+
+  is.sequential(years_between)
   
   return(output)
 }
