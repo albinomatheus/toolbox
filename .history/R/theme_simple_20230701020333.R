@@ -28,20 +28,20 @@
 #' @export
 
 theme_simple <- function(
-  base_family="HelveticaNowDisplay Regular",
+  base_family = "HelveticaNowDisplay Regular",
   base_size = 18,
-  strip_text_family = "HelveticaNowDisplay Regular",
+  strip_text_family = base_family,
   strip_text_size = 18,
-  plot_title_family = "HelveticaNowDisplay Bold",
+  plot_title_family = base_family,
   plot_title_size = 22,
   plot_title_margin = 10,
-  subtitle_family = "HelveticaNowDisplay Regular",
+  subtitle_family = base_family,
   subtitle_size = 18,
   subtitle_margin = 10,
-  caption_family = "HelveticaNowDisplay Regular",
+  caption_family = base_family,
   caption_size = 14,
   caption_margin = 10,
-  axis_title_family = "HelveticaNowDisplay Regular",
+  axis_title_family = base_family,
   axis_title_size = 18,
   axis_title_just = "mm",
   dark = FALSE,
@@ -51,6 +51,7 @@ theme_simple <- function(
   markdown = TRUE) {
     ret <- ggplot2::theme_minimal(base_family = base_family, base_size = base_size)
     ret <- ret + ggplot2::theme(legend.background = ggplot2::element_blank())
+    ret <- ret + ggplot2::theme(legend.text = ggplot2::element_text(size = base_size))
     ret <- ret + ggplot2::theme(legend.key = ggplot2::element_blank())
     ret <- ret + ggplot2::theme(legend.title = ggplot2::element_blank())
     ret <- ret + ggplot2::theme(plot.title.position = 'plot')
@@ -67,7 +68,7 @@ theme_simple <- function(
 
   } else {
 
-    grid_color <- "#cccccc"
+    grid_color <- "#a3a3a3"
     tick_color <- "black"
   }
 
