@@ -1,9 +1,6 @@
-#' Extract migration schedules (generalization of Tim Riffe's mig_un_fam)
-#'
-#' Smooth population counts using PCLM method
+# Extract migration schedules (generalization of Tim Riffe's mig_un_fam)
 #'
 #' @export
-#' 
 
 get_mig_structure <- function(NM, family, Single = TRUE, OAnew = 100, data = DemoTools::mig_un_families, params = DemoTools::mig_un_params){
 
