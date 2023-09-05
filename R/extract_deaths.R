@@ -52,6 +52,8 @@ extract_deaths <- function(data, location, sex, year1, year2, omega = 100) {
     purrr::map_dfr(~ DemoTools::graduate_pclm(
       Value = .x$obitos,
       Age = as.numeric(.x$idadeL),
+      AgeInt = case_when(.x$idadeU - .x$idadeL == 1 ~ 1,
+                                     TRUE ~ idadeU - idadeL + 1),
       OAnew = omega), 
       .id = "year")
   
@@ -67,6 +69,8 @@ extract_deaths <- function(data, location, sex, year1, year2, omega = 100) {
     purrr::map_dfr(~ DemoTools::graduate_pclm(
       Value = .x$obitos,
       Age = as.numeric(.x$idadeL),
+      AgeInt = case_when(.x$idadeU - .x$idadeL == 1 ~ 1,
+                                     TRUE ~ idadeU - idadeL + 1),
       OAnew = omega), 
       .id = "year") |> 
     tidyr::pivot_longer(-year, names_to = "age", values_to = "deaths") |> 
