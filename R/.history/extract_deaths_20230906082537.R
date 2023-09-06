@@ -63,14 +63,6 @@ extract_deaths <- function(data, location, sex, year1, year2, omega = 100) {
     dplyr::mutate(
       age = as.numeric(age),
       year = as.numeric(year) + years_between[1] - 1)
-
-  full_abridged <- df |>
-    tidyr::pivot_longer(-year, names_to = "age", values_to = "deaths") |> 
-    dplyr::mutate(
-      age = calcAgeAbr(as.numeric(age)),
-      year = as.numeric(year) + years_between[1] - 1) |> 
-      group_by(year, age) |> 
-      dplyr::reframe(deaths = sum(deaths))
   
   # Lista por ano em idades simples
   single <- df_list %>%
@@ -136,8 +128,7 @@ extract_deaths <- function(data, location, sex, year1, year2, omega = 100) {
       full = full,
       single = single,
       grouped = grouped,
-      abridged = abridged,
-      full_abridged = full_abridged)
+      abridged = abridged)
   
   is.sequential <- \(x) {
     if (all(diff(x) == diff(x)[1])) {
