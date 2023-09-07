@@ -4,7 +4,7 @@
 \alias{extract_deaths}
 \title{Extract deaths from Demographic and Sanitary Statistics}
 \usage{
-extract_deaths(data, location, sex, year1, year2, omega = 100)
+extract_deaths(data, location, sex, year1, year2, omega = 100, trunc = 70)
 }
 \description{
 Smooth death counts using PCLM method
