@@ -29,7 +29,8 @@ get_age_structure <- function(data, location, year, sex, omega) {
       Value = data2$pop[data2$sexo == sex], 
       Age = as.numeric(data2$idade[data2$sexo == sex]), 
       AgeInt = data2$ageint[data2$sexo == sex],
-      OAnew = omega)
+      OAnew = omega,
+      keep0 = TRUE)
   pclm_res <- 
     dplyr::tibble(
       pop_true = pclm_fit, 
@@ -54,36 +55,35 @@ get_age_structure <- function(data, location, year, sex, omega) {
   grouped <- 
     base::data.frame(
       age = seq(0, 85, by = 5),
-      pop = round(pop_gr),
+      pop = pop_gr,
       local = location,
-      ano = year,
+      year = year,
       sex = sex)  |> 
     dplyr::as_tibble()
   
   abridged <-  
     base::data.frame(
       age = c(0, 1, seq(5, 85, by = 5)),
-      pop = round(pop_abr),
+      pop = pop_abr,
       local = location,
-      ano = year,
-      sexo = sex)  |> 
+      year = year,
+      sex = sex)  |> 
     dplyr::as_tibble()
   
   full <- 
     base::data.frame(
       age = 1:length(pop_full) - 1,
-      pop = round(pop_full),
+      pop = pop_full,
       local = location,
-      ano = year,
-      sexo = sex)  |> 
+      year = year,
+      sex = sex)  |> 
     dplyr::as_tibble()
   
   output <- 
     base::list(
-      pop_grupos = grouped, 
-      pop_abreviada = abridged, 
-      pop_idade_simples = full)
+      pop_group = grouped, 
+      pop_abridged = abridged, 
+      pop_full = full)
   
   return(output)
-  
 }

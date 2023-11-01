@@ -29,7 +29,8 @@ get_age_structure <- function(data, location, year, sex, omega) {
       Value = data2$pop[data2$sexo == sex], 
       Age = as.numeric(data2$idade[data2$sexo == sex]), 
       AgeInt = data2$ageint[data2$sexo == sex],
-      OAnew = omega)
+      OAnew = omega,
+      keep0 = TRUE)
   pclm_res <- 
     dplyr::tibble(
       pop_true = pclm_fit, 

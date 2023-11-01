@@ -54,7 +54,8 @@ extract_deaths <- function(data, location, sex, year1, year2, omega = 100, trunc
       Age = as.numeric(.x$idadeL),
       AgeInt = case_when(.x$idadeU - .x$idadeL == 1 ~ 1,
                          TRUE ~ idadeU - idadeL + 1),
-      OAnew = omega),
+      OAnew = omega,
+      keep0 = TRUE),
       .id = "year")
 
   # Lista detalhada por ano
@@ -81,7 +82,8 @@ extract_deaths <- function(data, location, sex, year1, year2, omega = 100, trunc
       Age = as.numeric(.x$idadeL),
       AgeInt = case_when(.x$idadeU - .x$idadeL == 1 ~ 1,
                          TRUE ~ idadeU - idadeL + 1),
-      OAnew = omega),
+      OAnew = omega,
+      keep0 = TRUE),
       .id = "year") |>
     tidyr::pivot_longer(-year, names_to = "age", values_to = "deaths") |>
     dplyr::mutate(
